@@ -1,0 +1,15 @@
+version: 0.1
+
+phases:
+  pre_build:
+    commands:
+      - $(aws ecr get-login --region us-east-1)
+
+  build:
+    commands:
+      - docker build --force-rm -t mc.varun/kafka .
+
+  post_build:
+    commands:
+      - docker tag mc.varun/kafka:latest 497513737772.dkr.ecr.us-east-1.amazonaws.com/mc.varun/kafka:latest
+      - docker push 497513737772.dkr.ecr.us-east-1.amazonaws.com/mc.varun/kafka:latest
