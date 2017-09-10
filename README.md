@@ -1,7 +1,7 @@
 # docker-kafka
 _Docker image for Kafka_
 
-This image is intended to be used as part of the [Stack]() and therefore Zookeeper is referenced by its service name _zookeeper_. To run this image standalone, the Zookeeper host can be overriden by adding the following line to your hosts file:
+This image is intended to be used as part of the [Stack](https://github.com/varunmc/docker-stack) and therefore [Zookeeper](https://github.com/varunmc/docker-zookeeper) is referenced by its service name _zookeeper_. To run this image standalone, the Zookeeper host can be overriden by adding the following line to your hosts file:
 
 ```
 127.0.0.1   zookeeper
